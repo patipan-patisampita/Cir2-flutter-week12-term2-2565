@@ -9,7 +9,11 @@ class ListMenu {
 }
 
 List<ListMenu> menus = [
-  const ListMenu(title: "MENU-1", subtitle: "SUB-1", icon: Icons.person)
+  const ListMenu(title: "MENU-1", subtitle: "SUB-1", icon: Icons.person),
+  const ListMenu(title: "MENU-2", subtitle: "SUB-2", icon: Icons.water_drop),
+  const ListMenu(title: "MENU-3", subtitle: "SUB-3", icon: Icons.compost),
+  const ListMenu(title: "MENU-4", subtitle: "SUB-4", icon: Icons.wifi),
+  const ListMenu(title: "MENU-5", subtitle: "SUB-5", icon: Icons.flutter_dash),
 ];
 
 class ListViewMenu extends StatelessWidget {
@@ -26,19 +30,19 @@ class ListViewMenu extends StatelessWidget {
           padding: EdgeInsets.all(10),
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text("MENU-1"),
-              subtitle: Text("SUB-1"),
-              leading: CircleAvatar(child: Icon(Icons.person)),
+              title: Text("${menus[index].title}"),
+              subtitle: Text("${menus[index].subtitle}"),
+              leading: CircleAvatar(child: Icon(menus[index].icon)),
               trailing: Icon(Icons.arrow_circle_right_outlined),
               onTap: () {
-                debugPrint("MENU-1");
+                debugPrint("${menus[index].title} ${menus[index].subtitle}");
               },
             );
           },
           separatorBuilder: (context, index) {
             return Divider(color: Colors.blue);
           },
-          itemCount: 4,
+          itemCount: menus.length,
         ),
       ),
     );
