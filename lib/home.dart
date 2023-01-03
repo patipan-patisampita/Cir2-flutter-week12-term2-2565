@@ -5,8 +5,21 @@ import 'gridview_card_page.dart';
 import 'gridview_page.dart';
 import 'list_view_menu.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _counter = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    _counter = 1;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +117,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Counter",
+          "Counter: $_counter",
           style: TextStyle(
             color: Colors.red,
             fontSize: 40,
@@ -113,7 +126,11 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+
+          });
+        },
         child: Icon(Icons.add_card),
       ),
     );
