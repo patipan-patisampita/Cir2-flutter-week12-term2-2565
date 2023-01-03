@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'gridview_card_page.dart';
+import 'gridview_page.dart';
 import 'list_view_menu.dart';
 
 class HomePage extends StatelessWidget {
@@ -65,6 +66,14 @@ class HomePage extends StatelessWidget {
               title: Text("List View"),
               onTap: () async {
                 await Navigator.push(context, MaterialPageRoute(builder: (context) => ListViewMenu()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.api),
+              title: Text("Grid View page"),
+              onTap: () async {
+                await Navigator.push(context, MaterialPageRoute(builder: (context) => GridViewPage()),
                 );
               },
             ),
