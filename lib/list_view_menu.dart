@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+class ListMenu {
+  final String? title;
+  final String? subtitle;
+  final IconData? icon;
+
+  const ListMenu({this.title, this.subtitle, this.icon});
+}
+
+List<ListMenu> menus = [
+  const ListMenu(title: "MENU-1", subtitle: "SUB-1", icon: Icons.person)
+];
+
 class ListViewMenu extends StatelessWidget {
   const ListViewMenu({Key? key}) : super(key: key);
 

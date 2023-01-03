@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(Icons.apps),
+              leading: Icon(Icons.dynamic_form),
               title: Text("List View"),
               onTap: () async {
                 await Navigator.push(context, MaterialPageRoute(builder: (context) => ListViewMenu()),
