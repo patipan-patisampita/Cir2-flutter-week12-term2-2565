@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     // TODO: implement initState
-    _counter = 1;
+    _counter = 0;
     super.initState();
   }
 
@@ -29,7 +29,9 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             onPressed: () {
-              debugPrint("Delete");
+              setState(() {
+                _counter = 0;
+              });
             },
             icon: Icon(Icons.delete),
           ),
@@ -128,7 +130,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-
+            _counter = _counter + 1;
           });
         },
         child: Icon(Icons.add_card),
