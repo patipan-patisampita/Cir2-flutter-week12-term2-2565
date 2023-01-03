@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'contact.dart';
 import 'gridview_card_page.dart';
 import 'gridview_page.dart';
 import 'list_view_menu.dart';
@@ -74,6 +75,21 @@ class HomePage extends StatelessWidget {
               title: Text("Grid View page"),
               onTap: () async {
                 await Navigator.push(context, MaterialPageRoute(builder: (context) => GridViewPage()),
+                );
+              },
+            ),
+            Divider(
+              height: 20,
+              thickness: 1,
+              indent: 20,
+              endIndent: 0,
+              color: Colors.black38,
+            ),
+            ListTile(
+              leading: Icon(Icons.settings_accessibility),
+              title: Text("Contact Me"),
+              onTap: () async {
+                await Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()),
                 );
               },
             ),
