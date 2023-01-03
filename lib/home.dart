@@ -23,8 +23,30 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Text("Home Page"),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Elon Mask"),
+              accountEmail: Text("elon@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                child: Icon(Icons.android),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.apps),
+              title: Text("Home"),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
