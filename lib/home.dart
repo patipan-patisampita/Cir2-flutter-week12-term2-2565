@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'gridview_card_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -41,6 +43,18 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => HomePage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.apps),
+              title: Text("Grid View"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GridViewCardPage(),
                   ),
                 );
               },
