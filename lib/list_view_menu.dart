@@ -37,6 +37,9 @@ class ListViewMenu extends StatelessWidget {
               trailing: Icon(Icons.arrow_circle_right_outlined),
               onTap: () {
                 debugPrint("${menus[index].title} ${menus[index].subtitle}");
+                if(Navigator.canPop(context)){
+                  Navigator.pop<String>(context,menus[index].title);
+                }
               },
             );
           },

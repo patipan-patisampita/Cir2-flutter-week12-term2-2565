@@ -81,10 +81,8 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.dynamic_form),
               title: Text("List View"),
               onTap: () async {
-                await Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListViewMenu()),
-                );
+                var result = await Navigator.push<String>(context, MaterialPageRoute(builder: (context) => const ListViewMenu()));
+                debugPrint("List View onTap $result");
               },
             ),
             ListTile(
