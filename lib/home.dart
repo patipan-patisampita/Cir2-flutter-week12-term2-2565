@@ -66,7 +66,9 @@ class HomePage extends StatelessWidget {
               leading: Icon(Icons.dynamic_form),
               title: Text("List View"),
               onTap: () async {
-                await Navigator.push(context, MaterialPageRoute(builder: (context) => ListViewMenu()),
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListViewMenu()),
                 );
               },
             ),
@@ -74,7 +76,9 @@ class HomePage extends StatelessWidget {
               leading: Icon(Icons.api),
               title: Text("Grid View page"),
               onTap: () async {
-                await Navigator.push(context, MaterialPageRoute(builder: (context) => GridViewPage()),
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GridViewPage()),
                 );
               },
             ),
@@ -89,11 +93,23 @@ class HomePage extends StatelessWidget {
               leading: Icon(Icons.settings_accessibility),
               title: Text("Contact Me"),
               onTap: () async {
-                await Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()),
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ContactPage()),
                 );
               },
             ),
           ],
+        ),
+      ),
+      body: Center(
+        child: Text(
+          "Counter",
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
