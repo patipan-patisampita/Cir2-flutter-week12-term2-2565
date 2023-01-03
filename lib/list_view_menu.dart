@@ -11,13 +11,20 @@ class ListViewMenu extends StatelessWidget {
       ),
       body: Container(
         child: ListView.separated(
+          padding: EdgeInsets.all(10),
           itemBuilder: (context, index) {
             return ListTile(
               title: Text("MENU-1"),
+              subtitle: Text("SUB-1"),
+              leading: CircleAvatar(child: Icon(Icons.person)),
+              trailing: Icon(Icons.arrow_circle_right_outlined),
+              onTap: () {
+                debugPrint("MENU-1");
+              },
             );
           },
           separatorBuilder: (context, index) {
-            return Divider();
+            return Divider(color: Colors.blue);
           },
           itemCount: 4,
         ),
